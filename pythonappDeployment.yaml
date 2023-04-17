@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pythonApp
+  name: pythonApp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pythonApp
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pythonApp
+    spec:
+      containers:
+      - image: 09512/pythonapptest:v1
+        name: pythonapptest
+        ports:
+        - containerPort: 5000
