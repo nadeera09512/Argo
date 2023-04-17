@@ -15,7 +15,7 @@ spec:
         app: pythonapp
     spec:
       containers:
-      - image: 09512/pythonapptest:v1
+      - image: 09512/pythonapptest:v2
         name: pythonapptest
         ports:
         - containerPort: 5000
